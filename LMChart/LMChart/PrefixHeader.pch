@@ -1,0 +1,118 @@
+//
+//  PrefixHeader.pch
+//  LMChart
+//
+//  Created by liuming on 2018/1/8.
+//  Copyright © 2018年 U9. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "NSObject+DateCalendar.h"
+#import "UIView+LMFrameHelpers.h"
+#import "UIBezierPath+BesselCurve.h"
+
+typedef enum {
+    USkinTimeTypeDay = 0,
+    USkinTimeTypeWeek,
+    USkinTimeTypeMonth
+} USkinTimeType;
+
+
+#define LineStartX Fix375(45)
+#define LineStartY Fix375(21)
+#define TitleStartX Fix375(24)
+#define TitleBottomY Fix375(25)
+
+#define VerticalLineH Fix375(154)
+#define HorizontalLineW Fix375(299)
+
+#define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+#define Fix375(x) ((CGFloat)((x) * (SCREEN_WIDTH / 375.0)))
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+
+#define COL_BLUE            UIColorFromRGB(0x0292D3)
+#define COL_BLUE_NAV        UIColorFromRGB(0x00a0ea)
+#define COL_BLUE_DEEP        UIColorFromRGB(0x008fe9)
+#define COL_HOME_GRAY        UIColorFromRGB(0xfafafa)
+#define COL_HOME_GRAY_LINE   UIColorFromRGB(0xdfddde)
+#define COL_HOME_PANEL_FONT  UIColorFromRGB(0x444444)
+#define COL_GRAY_BG          UIColorFromRGB(0xFAFAFA)
+#define COL_2B               UIColorFromRGB(0x2b2b2b)
+#define COL_GRAY_CB UIColorFromRGB(0xCBCBCD)
+#define COL_GREEN UIColorFromRGB(0x2A9A63)
+#define COL_GREEN2 UIColorFromRGB(0x38A63F)
+#define COL_BACKGROUND_WHITE UIColorFromRGB(0xFFFFFF)
+#define Col_0xffffff UIColorFromRGB(0xffffff)
+#define Col_0xf2f2f2 UIColorFromRGB(0xf2f2f2)
+#define Col_0x000000 UIColorFromRGB(0x000000)
+#define Col_0x9b9b9b UIColorFromRGB(0x9b9b9b)
+#define Col_0x999999 UIColorFromRGB(0x999999)
+#define Col_0x605f65 UIColorFromRGB(0x605f65)
+#define Col_0xf6f5f5 UIColorFromRGB(0xf6f5f5)
+#define Col_0x191919 UIColorFromRGB(0x191919)
+#define Col_0xff001f UIColorFromRGB(0xff001f)
+#define Col_0xf0f0f0 UIColorFromRGB(0xf0f0f0)
+#define Col_0xf4f4f4 UIColorFromRGB(0xf4f4f4)
+#define Col_0xf3f3f3 UIColorFromRGB(0xf3f3f3)
+#define Col_0xf5f5f5 UIColorFromRGB(0xf5f5f5)
+#define Col_0xc2a270 UIColorFromRGB(0xc2a270)
+#define Col_0xa3a3a3 UIColorFromRGB(0xa3a3a3)
+#define Col_0xf73d39 UIColorFromRGB(0xf73d39)
+#define Col_0x21D335 UIColorFromRGB(0x21D335)
+#define Col_0xdfdfdf UIColorFromRGB(0xdfdfdf)
+#define Col_0x363636 UIColorFromRGB(0x363636)
+#define Col_0xf82727 UIColorFromRGB(0xf82727)
+#define Col_0xffa71d UIColorFromRGB(0xffa71d)
+#define Col_0xffcf82 UIColorFromRGB(0xffcf82)
+#define Col_0xeeeeee UIColorFromRGB(0xeeeeee)
+#define Col_0xd8d8d8 UIColorFromRGB(0xd8d8d8)
+#define Col_0x171513 UIColorFromRGB(0x171513)
+#define Col_0xb79657 UIColorFromRGB(0xb79657)
+#define Col_0xf0d8b3 UIColorFromRGB(0xf0d8b3)
+#define Col_0x707070 UIColorFromRGB(0x707070)
+#define Col_0x808080 UIColorFromRGB(0x808080)
+#define Col_0x846d41 UIColorFromRGB(0x846d41)
+#define Col_0xffe8b4 UIColorFromRGB(0xffe8b4)
+#define Col_0xe7e7e7 UIColorFromRGB(0xe7e7e7)
+#define Col_0x56ac67 UIColorFromRGB(0x56ac67)
+#define Col_0x57ad68 UIColorFromRGB(0x57ad68)
+#define Col_0x4a4a4a UIColorFromRGB(0x4a4a4a)
+#define Col_0x0076ff UIColorFromRGB(0x0076ff)
+#define Col_0x979797 UIColorFromRGB(0x979797)
+#define Col_0xc3a473 UIColorFromRGB(0xc3a473)
+#define Col_0xc2a373 UIColorFromRGB(0xc2a373)
+#define Col_0xf1f1f1 UIColorFromRGB(0xf1f1f1)
+#define Col_0x787878 UIColorFromRGB(0x787878)
+#define Col_0x3c3c3c UIColorFromRGB(0x3c3c3c)
+#define Col_0x74d7cb UIColorFromRGB(0x74d7cb)
+
+#define Col_0xaaaaaa UIColorFromRGB(0xaaaaaa)
+#define Col_0x333333 UIColorFromRGB(0x333333)
+#define Col_0x666666 UIColorFromRGB(0x666666)
+#define Col_0x999999 UIColorFromRGB(0x999999)
+#define Col_0xf7f6f6 UIColorFromRGB(0xf7f6f6)
+#define Col_0xf7f7f7 UIColorFromRGB(0xf7f7f7)
+#define Col_0xfafafa UIColorFromRGB(0xfafafa)
+#define Col_0xafafaf UIColorFromRGB(0xafafaf)
+#define Col_0xe14b5d UIColorFromRGB(0xe14b5d)
+#define Col_0xf2f2f2 UIColorFromRGB(0xf2f2f2)
+#define Col_0xf6f5f5 UIColorFromRGB(0xf6f5f5)
+#define Col_0x48dacb UIColorFromRGB(0x48dacb)
+#define Col_0x21C8B3 UIColorFromRGB(0x21C8B3)
+
+#define Col_0x99a0f8 UIColorFromRGB(0x99a0f8)
+
+#define Col_0xdef8f6 UIColorFromRGB(0xdef8f6)
+#define Col_0x77cecd UIColorFromRGB(0x77cecd)
+#define Col_0x77a027 UIColorFromRGB(0x77a027)//绿
+#define Col_0x58ad68 UIColorFromRGB(0x58ad68)//绿
+#define Col_0xf5cb08 UIColorFromRGB(0xf5cb08)//黄
+#define Col_0xfc6f31 UIColorFromRGB(0xfc6f31)//红
+#define Col_0x111111 UIColorFromRGB(0x111111)//灰
+
+
+#endif /* PrefixHeader_pch */
